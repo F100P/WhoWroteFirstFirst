@@ -1,9 +1,13 @@
 
 
 export default async function searchPhrase(inputID,inputString){
+ 
   
+
+
+
     const key = process.env.API_KEY
-   console.log(key);
+    
     const id = inputID;
     const phrase = inputString;
     
