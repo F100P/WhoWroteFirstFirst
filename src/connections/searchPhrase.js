@@ -15,7 +15,7 @@ export default async function searchPhrase(inputID,inputString){
     
     
     //Hämtar kommentarer från en video baserat på ID
-    await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=${process.env.API_KEY}&videoId=${id}&part=snippet&order=time&searchTerms=${phrase}`, {
+    await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=${process.env.REACT_APP_API_KEY}&videoId=${id}&part=snippet&order=time&searchTerms=${phrase}`, {
         method: "GET"
     })
 

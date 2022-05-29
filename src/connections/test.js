@@ -8,7 +8,7 @@ export default async function test(inputID){
     var First = "first";
     
     //Hämtar kommentarer från en video baserat på ID
-    await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=${process.env.API_KEY}&videoId=${id}&part=snippet&order=time&searchTerms=${First}`, {
+    await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=${process.env.REACT_APP_API_KEY}&videoId=${id}&part=snippet&order=time&searchTerms=${First}`, {
         method: "GET"
     })
 
