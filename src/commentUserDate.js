@@ -3,12 +3,12 @@ import React from "react";
 
 import "./App.css";
 function commentUserDate(data) {
-  console.log(data);
+  
   const author = data.authorDisplayName;
   const date = data.publishedAt;
   const comment = data.textOriginal;
   const profilePicture = data.authorProfileImageUrl;
-  console.log(profilePicture);
+  
   return (
     <Box className='commentBox'>
    

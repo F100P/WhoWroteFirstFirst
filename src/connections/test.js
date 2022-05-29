@@ -3,7 +3,7 @@
 export default async function test(inputID){
     
     const id = inputID;
-    console.log(id);
+    
     var test;
     var First = "first";
     

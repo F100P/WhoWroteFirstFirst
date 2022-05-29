@@ -1,4 +1,3 @@
-
 import "./App.css";
 import test from "./connections/test";
 import TextField from "@mui/material/TextField";
@@ -28,8 +27,6 @@ function App() {
     }
   };
 
-  
-
   const filterLink = (webbAdress) => {
     const videoID = webbAdress.split("v=");
     //maskar ut VideoID:t
@@ -43,7 +40,7 @@ function App() {
 
       setSelectedView(4);
 
-      console.log(videoID[1]);
+     
     } else {
       //lägg till vad som bör göras när det inte fungerar
       setNonValid(true);
@@ -70,7 +67,7 @@ function App() {
 
   const noData = (data) => {
     console.log(data);
-    if (data == null) {
+    if (data == null || data.length == 0) {
       return (
         <text>Sorry No Search Result Contaning The Phrase "{Phrase}"</text>
       );
@@ -96,7 +93,7 @@ function App() {
 
       setSelectedView(5);
 
-      console.log(videoID[1]);
+      
     } else {
       //lägg till vad som bör göras när det inte fungerar
       setNonValid(true);
@@ -122,7 +119,6 @@ function App() {
       case 1:
         return (
           <div>
-           
             <Button
               onClick={() => {
                 setSelectedView(2);
@@ -199,6 +195,7 @@ function App() {
       case 4:
         return (
           <div className='showComments'>
+            
             <h1>Here are the first comments containing the word "First"</h1>
             {printComments()}
           </div>
